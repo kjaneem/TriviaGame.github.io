@@ -73,7 +73,8 @@
       <form>
         <input id="A1-1Box" type="radio"/><label for="A1-1Box">A1-1</label><br>
         <input id="A1-2Box" type="radio"/><label for="A1-2Box">A1-3</label><br>
-        <input id="A1-3Box" type="radio"/><label for="A1-3Box">A1-3</label>
+        <input id="A1-3Box" type="radio"/><label for="A1-3Box">A1-3</label><br>
+        <input id="A1-4Box" type="radio"/><label for="A1-4Box">A1-4</label>
       </form>
     </div>
    </div>
@@ -94,7 +95,8 @@
       <form>
         <input id="A2-1Box" type="radio"/><label for="A2-1Box">A2-1</label><br>
         <input id="A2-2Box" type="radio"/><label for="A2-2Box">A2-2</label><br>
-        <input id="A2-3Box" type="radio"/><label for="A2-3Box">A2-3</label>
+        <input id="A2-3Box" type="radio"/><label for="A2-3Box">A2-3</label><br>
+        <input id="A2-4Box" type="radio"/><label for="A2-4Box">A2-4</label>
       </form>
     </div>
    </div>
@@ -115,7 +117,8 @@
       <form>
         <input id="A3-1Box" type="radio"/><label for="A3-1Box">A3-1</label><br>
         <input id="A3-2Box" type="radio"/><label for="A3-2Box">A3-2</label><br>
-        <input id="A3-3Box" type="radio"/><label for="A3-3Box">A3-3</label>
+        <input id="A3-3Box" type="radio"/><label for="A3-3Box">A3-3</label><br>
+        <input id="A3-4Box" type="radio"/><label for="A3-4Box">A3-4</label>
       </form>
     </div>
    </div>
@@ -157,25 +160,31 @@
           //   $("#A1-1Box").replaceWith(response.results[0].incorrect_answers[0]);
           //  console.log("question 1: " + response.results[0].incorrect_answers[0]);
 
+          // Populate the correct answer radio button
+          var random = Math.floor(Math.random() * 3) + 0;
+
+          $('label[for=A1-4Box]').html(response.results[0].correct_answer);
+          $('label[for=A2-4Box]').html(response.results[1].correct_answer);
+          $('label[for=A3-4Box]').html(response.results[2].correct_answer);
+  
+          // Populate the incorrect answer radio buttons
+
            $('label[for=A1-1Box]').html(response.results[0].incorrect_answers[0]);
            $('label[for=A1-2Box]').html(response.results[0].incorrect_answers[1]);
            $('label[for=A1-3Box]').html(response.results[0].incorrect_answers[2]);
+           
+
 
            $('label[for=A2-1Box]').html(response.results[1].incorrect_answers[0]);
            $('label[for=A2-2Box]').html(response.results[1].incorrect_answers[1]);
            $('label[for=A2-3Box]').html(response.results[1].incorrect_answers[2]);
-
+ 
            $('label[for=A3-1Box]').html(response.results[2].incorrect_answers[0]);
            $('label[for=A3-2Box]').html(response.results[2].incorrect_answers[1]);
            $('label[for=A3-3Box]').html(response.results[2].incorrect_answers[2]);
-
-          //  $("#A1-2Box").replaceWith(response.results[1].incorrect_answers[1]);
-          //  console.log("question 1: " + response.results[1].incorrect_answers[1]);
-
-          //  $("#A1-3Box").replaceWith(response.results[1].incorrect_answers[2]);
-          //  console.log("question 1: " + response.results[1].incorrect_answers[2]);
+ 
             
-        });
+        }); //end AJAX call
 
     // } //END document.ready
 

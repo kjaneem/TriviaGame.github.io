@@ -1,0 +1,25 @@
+dynamically build the html 
+  to show the object answers arrays 
+	within the questions arrays
+
+3 questions
+4 answers
+	1 correct answer
+	3 incorrect answers
+========
+for the number of questions
+{
+	randomly identify a radio button for the correct answer
+	display the correct answer radio button
+
+	incorrectIdx = 0;
+	for the number of total number of answers (4)
+	{
+		if (forIdx != random)
+		{
+			display an incorrect answer radio button(incorrectIdx)
+			incorrectIdx++;
+		}
+	}
+}
+	
