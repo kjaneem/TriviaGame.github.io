@@ -35,6 +35,25 @@
   </div>
 </div><br>
 
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-4">
+      <p></p>
+    </div>
+    <div class="col-sm-2" id=timeRemainingBox>
+      <p>Time Remaining: </p>
+    </div>
+    <div class="col-sm-2"> 
+      <p id=secondsLeft></p>
+    </div>
+    <div class="col-sm-4">
+      <p></p>
+    </div>
+  </div>
+</div><br>
+
+<div id="time-left"></div>
+
 <div id=gameView></div>
   
 </div> <!-- end main container -->
@@ -125,8 +144,6 @@
 
               }  //end displayChoices
         }  //end displayQuestion()
-
- 
  
        }); //end AJAX call
 
@@ -134,15 +151,31 @@
     // } //END document.ready
 
     //START GAME TIMER
+    //$(document).ready(function() {
+
+        for (var x = 0; x < 30; x++)
+        {
+          setTimeout(oneSecond, 1000 * 1);
+          var htmlString2 = "<p>" + x + "</p>";
+          $("#secondsLeft").html(htmlString2);
+        }
+
+        function oneSecond() {
+            console.log("hi");
+        }
+        
+    //     $("#time-left").html("<h2>Time's Up!</h2>");
+
+    //}  end document ready
 
     //IF MORE TIME AND MORE QUESTIONS
         //  DO PLAY GAME
     //ELSE
         //  DO DISPLAY CORRECT COUNT
 
-    function playGame() {
+    // function playGame() {
 
-    }
+    // }
 
     </script>    
     <!-- javascript -->
