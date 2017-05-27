@@ -1,8 +1,9 @@
 .container {
     
     font-family: "Times New Roman", Times, serif;
-    background-color: yellow;
+    background-color: lightgoldenrodyellow;
     color: black;
+    text-align: center;
 }
 
 #mainHeading {
@@ -10,21 +11,12 @@
     text-align: center;
 }
 
-#Q1Box,
-#Q2Box,
-#Q3Box {
+.question {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.choice {
+    background-color: lightsalmon;
     
 }
-
-#A1-1Box,
-#A1-2Box,
-#A1-3Box,
-#A2-1Box,
-#A2-2Box,
-#A2-3Box,
-#A3-1Box,
-#A3-2Box,
-#A3-3Box {
-
-}
-
